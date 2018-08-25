@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.tatiyanupanwong.supasin.android.apps.armirror">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
